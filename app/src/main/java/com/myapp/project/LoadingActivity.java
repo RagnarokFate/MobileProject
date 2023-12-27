@@ -7,27 +7,29 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoadingActivity extends AppCompatActivity {
 
-    private static final long SPLASH_DELAY = 2000; // 2 seconds
+    private static final long DELAY_AMOUNT = 2000; // 2 seconds
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading);
 
-        // Simulate fetching session user data (replace this with your actual logic)
-        fetchSessionUserData();
-
-        // Delayed start of the main activity after SPLASH_DELAY
-        new Handler().postDelayed(() -> {
-            Intent welcomeIntent = new Intent(LoadingActivity.this, MainActivity.class);
-            startActivity(welcomeIntent);
-            finish();
-        }, SPLASH_DELAY);
+        // Simulate fetching user data and switch to the login activity
+        fetchDataAndNavigate();
     }
 
-    private void fetchSessionUserData() {
-        // Simulate fetching session user data
-        // Replace this with your actual logic to obtain the latest session user data
-        // For example, you can make a network request, fetch from local storage, etc.
+    private void fetchDataAndNavigate() {
+        // Simulate fetching user data (replace with your actual data fetching logic)
+        // For example, you might use a network request or any other data retrieval method
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Data fetching complete, navigate to the login activity
+                startActivity(new Intent(LoadingActivity.this, LoginActivity.class));
+                finish();
+            }
+        }, DELAY_AMOUNT); // Simulating a 2-second delay, replace with your actual data fetching logic
     }
 }
+
+
