@@ -9,6 +9,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.myapp.entities.Account_Entity;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -94,16 +96,22 @@ public class SignupActivity extends AppCompatActivity {
 
         // Registration logic here
         // You can handle the registration process based on your app's requirements
-
-        // For now, just show a success message
-        errorLabel.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
         String userId = generateUserId();
 
         // Include the user ID in your registration logic or store it in the database
         // For now, just print it as an example
         System.out.println("User ID: " + userId);
 
-        errorLabel.setText("Registration successful!");
+        /*errorLabel.setText("Registration successful!");*/
+
+        try {
+            Account_Entity User_Data = new Account_Entity(userId, "", email, password, gender);
+            setContentView(R.layout.activity_authentication_signup);
+        }
+        catch (Exception e)
+        {
+            System.out.print(e);
+        }
     }
 
     private void showError(String errorMessage) {
