@@ -5,14 +5,14 @@ import java.net.UnknownHostException;
 import java.sql.Time;
 import java.util.Date;
 
-public class App_Activity {
+public class App_Activity_Entity {
     public String Device_IP_Address;
     public String Device_Type;
     public Time Last_Activity_Login_Time;
     public String Last_Activity_Approximate_Location;
 
     // Constructor
-    public App_Activity(String deviceType, Date latestLoginTime, String latestLoginLocation) {
+    public App_Activity_Entity(String deviceType, Date latestLoginTime, String latestLoginLocation) {
         // Set Device_Type
         this.Device_Type = deviceType;
 

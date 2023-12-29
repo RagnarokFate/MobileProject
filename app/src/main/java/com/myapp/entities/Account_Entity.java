@@ -1,6 +1,13 @@
 package com.myapp.entities;
 import androidx.room.PrimaryKey;
 
+import com.myapp.project.UserType;
+
+import java.util.List;
+import java.util.Set;
+
+// TODO
+
 public class Account_Entity {
     @PrimaryKey(autoGenerate = true)
     public int database_id;
@@ -14,31 +21,42 @@ public class Account_Entity {
 
     public String User_Phone_number;
 
-    public Account_Entity(String id, String user_username, String user_Email, String user_Password, String user_Gender) {
+    public UserType User_Type;
+
+    private Set<String> friendIds;
+
+    private List<Friendship_Entity> friendships;
+
+    public Account_Entity(String id, String user_username, String user_Email, String user_Password, String user_Gender,UserType User_Type) {
 
         this.id = id;
         this.User_username = user_username;
         this.User_Email = user_Email;
         this.User_Password = user_Password;
         this.User_Gender = user_Gender;
+        this.User_Type = User_Type;
     }
 
-    public Account_Entity(String id, String user_username, String user_Email, String user_Password, String user_Gender, String user_Phone_number) {
+    public Account_Entity(String id, String user_username, String user_Email, String user_Password, String user_Gender, String user_Phone_number,UserType User_Type) {
         this.id = id;
         this.User_username = user_username;
         this.User_Email = user_Email;
         this.User_Password = user_Password;
         this.User_Gender = user_Gender;
         this.User_Phone_number = user_Phone_number;
+        this.User_Type = User_Type;
+
     }
 
-    public Account_Entity(Account_Entity user_data, String user_Phone_number) {
+    public Account_Entity(Account_Entity user_data, String user_Phone_number,UserType User_Type) {
         this.id = id;
         this.User_username = user_data.User_username;
         this.User_Email = user_data.User_Email;
         this.User_Password = user_data.User_Password;
         this.User_Gender = user_data.User_Gender;
         this.User_Phone_number = user_Phone_number;
+        this.User_Type = User_Type;
+
     }
     public String getId() {
         return id;
@@ -86,6 +104,28 @@ public class Account_Entity {
 
     public void setUser_Phone_number(String user_Phone_number) {
         User_Phone_number = user_Phone_number;
+    }
+
+    public Set<String> getFriendIds() {
+        return friendIds;
+    }
+
+    public void addFriend(String friendId) {
+        friendIds.add(friendId);
+    }
+
+    public void removeFriend(String friendId) {
+        friendIds.remove(friendId);
+    }
+
+    // Constructor and other methods
+
+    public List<Friendship_Entity> getFriendships() {
+        return friendships;
+    }
+
+    public void addFriendship(Friendship_Entity friendship) {
+        friendships.add(friendship);
     }
 
 }

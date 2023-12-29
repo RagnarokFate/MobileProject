@@ -1,10 +1,6 @@
 package com.myapp.entities;
 
-import androidx.room.PrimaryKey;
-
-import java.sql.Time;
-
-public class FetchDataCell {
+public class Fetch_Data_Cell_Entity {
     //This data cell is going to be available in the background to use for future purposes.
 
     public String id;
@@ -19,6 +15,6 @@ public class FetchDataCell {
 
     public double App_Currency;
 
-    public App_Activity Latest_Activity;
+    public App_Activity_Entity Latest_Activity;
 
 }

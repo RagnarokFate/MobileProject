@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.myapp.project.UserType.*;
 import com.myapp.entities.Account_Entity;
 
 import java.text.SimpleDateFormat;
@@ -66,6 +66,9 @@ public class SignupActivity extends AppCompatActivity {
         String password = passwordEditText.getText().toString().trim();
         String gender = genderSpinner.getSelectedItem().toString();
         boolean agreeChecked = agreeCheckBox.isChecked();
+        String signup_type = "user"; // You need to implement a method to get the role
+        UserType user_type = determineUserType(signup_type);
+
 
         // Reset error label
         errorLabel.setText("");
@@ -105,7 +108,7 @@ public class SignupActivity extends AppCompatActivity {
         /*errorLabel.setText("Registration successful!");*/
 
         try {
-            Account_Entity User_Data = new Account_Entity(userId, "", email, password, gender);
+            Account_Entity User_Data = new Account_Entity(userId, "", email, password, gender,user_type);
             setContentView(R.layout.activity_authentication_signup);
         }
         catch (Exception e)
@@ -127,5 +130,20 @@ public class SignupActivity extends AppCompatActivity {
     private boolean isValidPassword(String password) {
         // Password validation: At least 6 characters, contains a number, and both upper and lower case letters
         return password.length() >= 6 && password.matches(".*\\d.*") && password.matches(".*[A-Z].*") && password.matches(".*[a-z].*");
+    }
+
+
+    private UserType determineUserType(String role) {
+        switch (role.toLowerCase()) {
+            case "admin":
+                return UserType.Admin;
+            case "moderator":
+                return UserType.Moderator;
+            case "content_creator":
+                return UserType.Content_Creator;
+            // Add more cases for other user types as needed
+            default:
+                return UserType.User; // Default to regular user type
+        }
     }
 }
