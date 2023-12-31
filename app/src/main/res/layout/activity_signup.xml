@@ -81,13 +81,34 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <!-- Enter Username -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/UsernameInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/confirmEmailInputLayout"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/UsernameEditText"
+                        style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Username"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
                 <!-- Password -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/passwordInputLayout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/confirmEmailInputLayout"
+                    android:layout_below="@id/UsernameInputLayout"
                     android:layout_marginTop="8dp">
 
                     <com.google.android.material.textfield.TextInputEditText
