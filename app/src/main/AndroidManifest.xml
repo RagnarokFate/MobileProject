@@ -14,7 +14,7 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".LoadingActivity"
+            android:name="com.myapp.UI.LoadingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,11 +23,11 @@
         </activity>
 
         <activity
-            android:name=".LoginActivity"
+            android:name="com.myapp.UI.LoginActivity"
             android:exported="true">
         </activity>
 
-        <activity android:name=".SignupActivity"
+        <activity android:name="com.myapp.UI.SignupActivity"
             android:exported="true">
 
         </activity>
