@@ -1,4 +1,4 @@
-package com.myapp.entities;
+package com.myapp.UI;
 
 // TODO
 public class FriendGraph {

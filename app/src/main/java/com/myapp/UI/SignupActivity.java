@@ -1,4 +1,4 @@
-package com.myapp.project;
+package com.myapp.UI;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,8 +8,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.myapp.project.UserType.*;
-import com.myapp.entities.Account_Entity;
+
+import com.myapp.Data.Data_Entities.Account_Entity;
+import com.myapp.project.R;
+import com.myapp.UI.UserType;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

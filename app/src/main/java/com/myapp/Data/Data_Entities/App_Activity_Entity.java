@@ -1,4 +1,4 @@
-package com.myapp.entities;
+package com.myapp.Data.Data_Entities;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

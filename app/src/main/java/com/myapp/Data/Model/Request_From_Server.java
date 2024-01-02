@@ -1,4 +1,4 @@
-package com.myapp.entities;
+package com.myapp.Data.Model;
 
 public class Request_From_Server {
     public int request_id;

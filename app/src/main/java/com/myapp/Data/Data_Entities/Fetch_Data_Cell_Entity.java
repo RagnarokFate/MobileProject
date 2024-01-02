@@ -1,4 +1,4 @@
-package com.myapp.entities;
+package com.myapp.Data.Data_Entities;
 
 public class Fetch_Data_Cell_Entity {
     //This data cell is going to be available in the background to use for future purposes.

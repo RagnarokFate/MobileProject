@@ -1,8 +1,8 @@
-package com.myapp.entities;
+package com.myapp.Data.Data_Entities;
 import androidx.room.PrimaryKey;
 
-import com.myapp.project.UserType;
-
+import com.myapp.UI.UserType;
+import com.myapp.Data.Data_Entities.Friendship_Entity;
 import java.util.List;
 import java.util.Set;
 
