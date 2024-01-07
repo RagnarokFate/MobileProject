@@ -19,7 +19,7 @@
         tools:targetApi="31">
 
         <activity
-            android:name="com.myapp.UI.LoadingActivity"
+            android:name="com.myapp.UserInterface.LoadingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,21 +28,21 @@
         </activity>
 
         <activity
-            android:name="com.myapp.UI.LoginActivity"
+            android:name="com.myapp.UserInterface.LoginActivity"
             android:exported="true">
         </activity>
 
         <activity
-            android:name="com.myapp.UI.AuthenticationSignUpActivity"
+            android:name="com.myapp.UserInterface.AuthenticationSignUpActivity"
             android:exported="true">
         </activity>
 
-        <activity android:name="com.myapp.UI.SignupActivity"
+        <activity android:name="com.myapp.UserInterface.SignupActivity"
             android:exported="true">
 
         </activity>
         <activity
-            android:name="com.myapp.UI.ChallengerActivity"
+            android:name="com.myapp.UserInterface.ChallengerActivity"
             android:exported="true">
         </activity>
 

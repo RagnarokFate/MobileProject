@@ -1,4 +1,4 @@
-package com.myapp.Data.Model;
+package com.myapp.Server.Entity;
 
 public class Request {
     public int request_id;

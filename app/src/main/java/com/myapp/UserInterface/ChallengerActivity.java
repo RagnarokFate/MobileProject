@@ -1,4 +1,4 @@
-package com.myapp.UI;
+package com.myapp.UserInterface;
 
 import android.Manifest;
 import android.content.Context;

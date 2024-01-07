@@ -1,11 +1,10 @@
-package com.myapp.UI;
+package com.myapp.UserInterface;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.myapp.UI.LoginActivity;
 import com.myapp.project.R;
 
 public class LoadingActivity extends AppCompatActivity {

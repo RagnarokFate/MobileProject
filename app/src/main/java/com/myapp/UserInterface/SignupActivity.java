@@ -1,4 +1,4 @@
-package com.myapp.UI;
+package com.myapp.UserInterface;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,9 +9,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.myapp.Data.Data_Entities.Account_Entity;
+import com.myapp.Entities.Data_Entities.Account_Entity;
 import com.myapp.project.R;
-import com.myapp.UI.UserType;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

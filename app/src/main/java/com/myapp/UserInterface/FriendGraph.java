@@ -1,4 +1,4 @@
-package com.myapp.UI;
+package com.myapp.UserInterface;
 
 // TODO
 public class FriendGraph {

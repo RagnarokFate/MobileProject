@@ -1,4 +1,4 @@
-package com.myapp.UI;
+package com.myapp.UserInterface;
 
 public enum UserType {
     User,Admin,Moderator,Content_Creator,Friend_Follower,Guest,Advertiser,Analytics_User

@@ -1,4 +1,4 @@
-package com.myapp.UI;
+package com.myapp.UserInterface;
 import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
@@ -6,7 +6,6 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.myapp.project.R;
-import com.myapp.UI.SignupActivity;
 
 public class LoginActivity extends AppCompatActivity {
 

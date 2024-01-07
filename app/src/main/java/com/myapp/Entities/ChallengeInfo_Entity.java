@@ -1,4 +1,4 @@
-package com.myapp.Data.Data_Entities;
+package com.myapp.Entities.Data_Entities;
 
 import java.sql.Time;
 
