@@ -32,6 +32,11 @@
             android:exported="true">
         </activity>
 
+        <activity
+            android:name="com.myapp.UI.AuthenticationSignUpActivity"
+            android:exported="true">
+        </activity>
+
         <activity android:name="com.myapp.UI.SignupActivity"
             android:exported="true">
 

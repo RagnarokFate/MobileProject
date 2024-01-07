@@ -1,4 +1,4 @@
-package com.myapp.Util;
+package com.myapp.server.Util;
 
 import android.os.AsyncTask;
 

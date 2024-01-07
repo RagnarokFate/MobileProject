@@ -1,47 +1,51 @@
 package com.myapp.UI;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.myapp.project.R;
 
+
 public class AuthenticationSignUpActivity extends AppCompatActivity {
 
-    private EditText phoneNumberEditText;
-    private Button authenticationButton;
-    private EditText authenticationCodeEditText;
-    private Button validateButton;
+    private EditText etPhoneNumber, etCode;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authentication_signup);
 
-        // Initialize views
-        phoneNumberEditText = findViewById(R.id.phoneNumberEditText);
-        authenticationButton = findViewById(R.id.authenticationButton);
-        authenticationCodeEditText = findViewById(R.id.authenticationCodeEditText);
-        validateButton = findViewById(R.id.validateButton);
+        etPhoneNumber = findViewById(R.id.etPhoneNumber);
+        etCode = findViewById(R.id.etCode);
 
-        // Set click listeners
-        authenticationButton.setOnClickListener(new View.OnClickListener() {
+        Button btnSendCode = findViewById(R.id.btnSendCode);
+        btnSendCode.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                // Implement authentication logic here
-                // You can send an authentication code to the provided phone number
+            public void onClick(View view) {
+                // Implement code to send verification code to the provided phone number
+                Toast.makeText(AuthenticationSignUpActivity.this, "Code sent!", Toast.LENGTH_SHORT).show();
             }
         });
 
-        validateButton.setOnClickListener(new View.OnClickListener() {
+        Button btnVerifyCode = findViewById(R.id.btnVerifyCode);
+        btnVerifyCode.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                // Implement validation logic here
-                // Validate the entered authentication code and phone number
+            public void onClick(View view) {
+                // Implement code to verify the entered code
+                String enteredCode = etCode.getText().toString().trim();
+                if (!enteredCode.isEmpty()) {
+                    // Code verification logic here
+                    Toast.makeText(AuthenticationSignUpActivity.this, "Code verified!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(AuthenticationSignUpActivity.this, "Please enter the verification code.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
 }
-

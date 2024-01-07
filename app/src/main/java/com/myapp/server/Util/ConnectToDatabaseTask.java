@@ -1,4 +1,4 @@
-package com.myapp.Util;
+package com.myapp.server.Util;
 
 import android.os.AsyncTask;
 import java.io.BufferedReader;
@@ -11,7 +11,8 @@ public class ConnectToDatabaseTask extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... params) {
         try {
             // Replace the URL with the location of your PHP file
-            URL url = new URL("http://your_server_domain/db_connect.php");
+            // For example, if your PHP file is hosted on a server, use the server's URL
+            URL url = new URL("jdbc:mysql://127.0.0.1:3306/My_Project");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));

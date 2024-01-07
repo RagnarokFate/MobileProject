@@ -1,4 +1,4 @@
-package com.myapp.Network;
+package com.myapp.server.Network;
 
 import com.myapp.Data.Model.Response;
 import com.myapp.Data.Model.Request;
@@ -38,7 +38,7 @@ public class ServerHandler implements Runnable {
 
             // Send the JSON response back to the client
             objectOutputStream.writeObject(jsonResponse);
-            objectOutputStream.flush();
+            objectOutputStream.flush();  
 
             // Close the connections
             objectInputStream.close();

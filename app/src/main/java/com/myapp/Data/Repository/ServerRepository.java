@@ -11,7 +11,7 @@ import java.net.Socket;
 
 public class ServerRepository {
 
-    private static final String SERVER_IP = "192.168.1.200"; // Replace with your server's IP address
+    private static final String SERVER_IP = "127.0.0.1"; // Replace with your server's IP address
 
     public Response sendRequestToServer(Request request) {
         try {
