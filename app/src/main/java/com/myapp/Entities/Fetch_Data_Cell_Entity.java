@@ -1,20 +1,93 @@
-package com.myapp.Entities.Data_Entities;
+package com.myapp.Entities;
+
 
 public class Fetch_Data_Cell_Entity {
-    //This data cell is going to be available in the background to use for future purposes.
+    private String id;
+    private String userUsername;
+    private String userEmail;
+    private String userPassword;
+    private String userGender;
+    private String userPhoneNumber;
+    private double appCurrency;
+    private App_Activity_Entity latestActivity;
 
-    public String id;
-    public String User_username;
-    public String User_Email;
+    public Fetch_Data_Cell_Entity(String id, String userUsername, String userEmail, String userPassword,
+                               String userGender, String userPhoneNumber, double appCurrency,
+                               App_Activity_Entity latestActivity) {
+        this.id = id;
+        this.userUsername = userUsername;
+        this.userEmail = userEmail;
+        this.userPassword = userPassword;
+        this.userGender = userGender;
+        this.userPhoneNumber = userPhoneNumber;
+        this.appCurrency = appCurrency;
+        this.latestActivity = latestActivity;
+    }
 
-    public String User_Password;
+    // Add getters and setters for all fields
 
-    public String User_Gender;
+    public String getId() {
+        return id;
+    }
 
-    public String User_Phone_number;
+    public void setId(String id) {
+        this.id = id;
+    }
 
-    public double App_Currency;
+    public String getUserUsername() {
+        return userUsername;
+    }
 
-    public App_Activity_Entity Latest_Activity;
+    public void setUserUsername(String userUsername) {
+        this.userUsername = userUsername;
+    }
 
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
+
+    public String getUserGender() {
+        return userGender;
+    }
+
+    public void setUserGender(String userGender) {
+        this.userGender = userGender;
+    }
+
+    public String getUserPhoneNumber() {
+        return userPhoneNumber;
+    }
+
+    public void setUserPhoneNumber(String userPhoneNumber) {
+        this.userPhoneNumber = userPhoneNumber;
+    }
+
+    public double getAppCurrency() {
+        return appCurrency;
+    }
+
+    public void setAppCurrency(double appCurrency) {
+        this.appCurrency = appCurrency;
+    }
+
+    public App_Activity_Entity getLatestActivity() {
+        return latestActivity;
+    }
+
+    public void setLatestActivity(App_Activity_Entity latestActivity) {
+        this.latestActivity = latestActivity;
+    }
 }
+

@@ -65,7 +65,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/settings"
-            android:text="Settings" />
+            android:text="Settings"
+            tools:layout_editor_absoluteX="332dp"
+            tools:layout_editor_absoluteY="40dp" />
     </com.google.android.material.tabs.TabLayout>
 
     <ListView

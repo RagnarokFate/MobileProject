@@ -9,7 +9,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.myapp.Entities.Data_Entities.Account_Entity;
+import com.myapp.Entities.Account_Entity;
 import com.myapp.project.R;
 
 import java.text.SimpleDateFormat;
